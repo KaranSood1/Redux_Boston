@@ -5,7 +5,7 @@
  export const selectUser= (user) => {
      console.log("Clicked on user:", user.first);
      return{
-         type: "User Selected",
+         type: "USER_SELECTED",
          payload : user
      }
 };

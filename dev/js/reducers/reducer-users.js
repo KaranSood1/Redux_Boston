@@ -9,13 +9,13 @@ export default function () {
         },
         {
             id: 2,
-            first: "Samrat",
+            first: "x",
             last: "Dani",
             description : "Just like this"
 
         },
         {
-            id: 1,
+            id: 3,
             first: "Anmol",
             last: "W",
             description : "Like this, Always"

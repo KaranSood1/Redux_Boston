@@ -11,11 +11,14 @@ class UserList extends Component {
     createListItems(){
     return this.props.users.map((user) => {
         return(
-            <li key={user.id}>{user.first} {user.last}</li>
+            <li onClick={()=>this.props.selectUser(user)}
+                key={user.id}
+            >
+                {user.first} {user.last}
+                </li>
         )
     });
     }
-
     render (){
         return (
             <div>
@@ -33,7 +36,7 @@ class UserList extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-
+    return bindActionCreators({selectUser : selectUser},dispatch)
 }
 
 function mapStateToProps(state) {
@@ -42,5 +45,5 @@ function mapStateToProps(state) {
    };
 }
 
-export default connect(mapStateToProps)(UserList);
+export default connect(mapStateToProps,mapDispatchToProps)(UserList);
 
